@@ -1,0 +1,17 @@
+{
+  "name": "projeto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "d": "^1.0.1",
+    "jest": "^29.7.0",
+    "uuid": "^9.0.1"
+  }
+}
