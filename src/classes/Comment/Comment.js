@@ -1,24 +1,30 @@
-class Comment {
-  constructor(author, content) {
-    this.validateAuthor(author);
-    this.validateContent(content);
+const { Post } = require("../Post/Post.js");
 
-    this.author = author;
-    this.content = content;
-    this.createdAt = new Date();
+class Comment extends Post {
+  constructor({
+    user,
+    textPost,
+    uploadImage = null,
+    parentPost,
+    comments = [],
+  }) {
+    super({ user, textPost, uploadImage });
+    this.parentPost = parentPost;
+    this.comments = comments;
   }
 
-  validateAuthor(author) {
-    if (!(author instanceof User)) {
-      throw new TypeError(
-        "O autor do comentário deve ser uma instância da classe User."
-      );
-    }
+  addComment(user, comment) {
+    const comment = new Comment({
+      user: new User(author),
+      textPost: content,
+      parentPost: this,
+    });
+    this.comments.push(comment);
   }
 
-  validateContent(content) {
-    if (!content) {
-      throw new TypeError("Você precisa fornecer um texto de comentário.");
+  deleteComment(index) {
+    if (index >= 0 && index < this.comments.length) {
+      this.comments.splice(index, 1);
     }
   }
 }

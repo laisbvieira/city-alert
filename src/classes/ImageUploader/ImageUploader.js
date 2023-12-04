@@ -30,17 +30,6 @@ class ImageUploader {
       );
     }
   }
-
-  deleteImage() {
-    console.log(`Simulando exclusão da imagem do post ID ${this.postId}...`);
-
-    return new Promise((resolve) => {
-      console.log(
-        `Exclusão da imagem do post ID ${this.postId} concluída com sucesso.`
-      );
-      resolve();
-    });
-  }
 }
 
 module.exports = { ImageUploader };

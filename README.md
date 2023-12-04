@@ -4,7 +4,7 @@ CityAlert - Plataforma Local para Alertas Urbanos
 
 **Descrição**
 
-O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação entre os membros de uma comunidade em uma cidade do interior (Paraisópilis, Minas Gerais). A plataforma permite que os usuários compartilhem alertas, problemas urbanos e soluções, promovendo a conscientização e a colaboração na resolução de questões que afetam a qualidade de vida na região.
+O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação entre os membros de uma comunidade em uma cidade do interior (Paraisópolis, Minas Gerais). A plataforma permite que os usuários compartilhem alertas, problemas urbanos e soluções, promovendo a conscientização e a colaboração na resolução de questões que afetam a qualidade de vida na região.
 
 **Recursos Principais**
 
@@ -15,6 +15,10 @@ O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação
 - **Upload de Imagens**: Os usuários podem anexar imagens às postagens para fornecer uma visualização mais detalhada dos problemas relatados.
 
 - **Opções Padronizadas e Personalizadas**: Utilização de opções padronizadas (categorias) para descrever os problemas urbanos comuns. Os usuários também têm a opção de adicionar problemas personalizados.
+
+**Diagrama UML**
+
+![Diagrama UML](/projeto-final/public/assets/images/uml_projeto_final.png)
 
 **Tecnologias Utilizadas**
 

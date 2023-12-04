@@ -1,7 +1,10 @@
 const { Comment } = require("./Comment.js");
+const { User } = require("../User/User.js");
 
+//TODO: finalizar testes
 describe("Testes da classe Comment", () => {
   test("deve retornar os dados corretamente ao criar uma instância de Comment", () => {
+    const user = new User("João");
     const comment = new Comment("João", "Exemplo de comentário");
 
     expect(comment.author).toBe("João");

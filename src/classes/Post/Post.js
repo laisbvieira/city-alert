@@ -1,51 +1,33 @@
-import { v4 as uuidv4 } from "uuid";
-import ImageUploader from "../ImageUploader/ImageUploader.js";
-import Comment from "../Comment/Comment.js";
-import User from "../User/User.js";
+const { v4: uuidv4 } = require("uuid");
+const { ImageUploader } = require("../ImageUploader/ImageUploader.js");
+const { User } = require("../User/User.js");
+const { Feed } = require("../Feed/Feed.js");
 
 class Post {
-  constructor({ author, user, weatherIssue, textPost, uploadImage = null }) {
+  static feed = new Feed();
+
+  constructor({ user, textPost, uploadImage = null }) {
     this.postId = uuidv4();
-    this.user = new User();
-    this.address = address;
-    this.weatherIssue = weatherIssue;
+    this.user = user || new User();
     this.textPost = textPost;
-    this.uploadImageInstance = new ImageUploader(this.postId);
-    this.comments = [];
-    this.status = "Pendente";
+    this.uploadedImage = uploadImage;
   }
 
-  publishPost() {
-    console.log("Post criado:", this);
+  createPost() {
+    Post.feed.addPost(this);
   }
 
   deletePost() {
-    console.log("Post deletado");
+    Post.feed.removePost(this);
   }
 
-  updatePostStatus(newStatus) {
-    this.status = newStatus;
-    console.log("Status do post atualizado para:", newStatus);
-  }
-
-  performImageUpload(imageFile) {
-    this.uploadImageInstance.uploadImage(imageFile);
-    alert("Imagem carregada com sucesso!");
-  }
-
-  addComment(author, content) {
-    const newComment = new Comment(author, content);
-    this.comments.push(newComment);
-  }
-
-  deleteComment(index) {
-    if (this.isValidCommentIndex(index)) {
-      this.comments.splice(index, 1);
+  loadImage(imageFile) {
+    if (imageFile) {
+      this.uploadedImage = ImageUploader.upload(imageFile);
+      console.log("Imagem carregada com sucesso!");
+    } else {
+      console.error("Erro: Nenhuma imagem fornecida para upload.");
     }
-  }
-
-  isValidCommentIndex(index) {
-    return index >= 0 && index < this.comments.length;
   }
 }
 

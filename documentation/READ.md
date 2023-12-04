@@ -2,7 +2,9 @@
 
 ### Introdução
 
-O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação entre os membros de uma comunidade em uma cidade do interior. A plataforma permite que os usuários compartilhem alertas, problemas urbanos e soluções, promovendo a conscientização e a colaboração na resolução de questões que afetam a qualidade de vida na região.
+Paraisópolis, situada na Serra da Mantiqueira, enfrenta desafios urbanos únicos, como chuvas intensas, tempestades e períodos sem energia e água. Esses problemas têm impacto direto na vida da população local, especialmente com o agravamento das mudanças climáticas em todo mundo, aumentando o risco de inundações, quedas de árvores e danos estruturais.
+
+O CityAlert surge como uma plataforma local de comunicação, possibilitando que os moradores compartilhem informações sobre esses problemas. A ideia é criar uma comunidade online onde a população, utilizando JavaScript, possa discutir e encontrar soluções para os desafios enfrentados em Paraisópolis, contribuindo para a adaptação da cidade às mudanças climáticas.
 
 ### Objetivo geral do projeto:
 
@@ -22,14 +24,40 @@ O projeto tem como objetivo a criação de uma plataforma local que funcione com
 
 #### Classe User
 
-1. Função: Criação do objeto user
+1. Função: Criação do objeto user recebendo o nome e um ou dois meios de contato (telefone ou e-mail)
 2. Atributos:
-   Públicos: name
-   Privados: phone
+   name
+   email (opcional)
+   phone (opcional)
 3. Métodos:
 
-- validateName: verifica se o atributo name é do tipo string e está presente
-- validatePhone: verifica se o atributo phone é do tipo number e no formato adequado através de um regex
+- validateUserInput: valida os atributos para garantir a aplicação das funções de validação do nome, telefone e e-mail
+- isValidString: valida a existência e tipo do atributo name
+- validatePhone: verifica se o atributo phone está no formato adequado através de um regex
+- validateEmail: verifica se o atributo email está no formato adequado através de um regex
+
+#### Classe Post
+
+1. Função: Criação de um post a partir de um usuário, mensagem do post e a possibilidade de dar upload de uma imagem
+2. Atributos:
+   user: instância da classe User
+   textPost
+   uploadImage (opcional)
+3. Métodos:
+
+- createPost:
+- deletePost:
+- uploadImage: função para receber o imageFile
+
+#### Classe Comment
+
+1. Função: Criação do objeto comment
+2. Atributos:
+   Públicos: author, content
+3. Métodos:
+
+- validateAuthor: verifica se o atributo author é instância da classe User
+- validateContent: verifica se o atributo content está presente
 
 #### Classe Comment
 
@@ -43,15 +71,15 @@ O projeto tem como objetivo a criação de uma plataforma local que funcione com
 
 #### Classe ImageUploader
 
-1. Função: Criação
+1. Função: Lida com o upload de uma imagem, fazendo uma simulação de um serviço para subir imagens
 2. Atributos:
-   Público: postId, imageFile
+   postId
+   imageFile
 3. Métodos:
 
 - isImageFile: verifica se o arquivo recebido é do tipo imagem e com as extensões permitidas: .png e .jpeg
 - uploadImage: simula o upload de imagem
 - handleImageSelect: lida a validação do arquivos da imagem para depois chamar a função de upload
-- deleteImage: simula a exclusão da imagem de um post específico
 
 #### Classe UserPost:
 
