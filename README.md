@@ -18,7 +18,7 @@ O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação
 
 **Diagrama UML**
 
-![Diagrama UML](/projeto-final/public/assets/images/uml_projeto_final.png)
+![Diagrama UML](/public/assets/images/uml_projeto_final.png)
 
 **Tecnologias Utilizadas**
 
