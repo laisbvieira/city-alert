@@ -48,4 +48,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, propor m
 
 **Apresentação em PDF**
 
-[Link para o PDF](/public/assets/pdf/pitch-projeto-final)
+[Link para o PDF](/public/assets/pdf/pitch-projeto-final.pdf)
