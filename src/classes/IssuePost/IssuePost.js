@@ -1,5 +1,6 @@
 const { Post } = require("../Post/Post.js");
 
+//TODO: adjust location
 class IssuePost extends Post {
   DEFAULT_ISSUES = [
     "Alagamento",
@@ -22,18 +23,19 @@ class IssuePost extends Post {
     location,
     status = "Pendente",
   }) {
-    super({ user, textPost, uploadImage, postId });
+    super({ user, textPost, uploadImage });
+    this.postId = postId || this.postId;
     this.issue = issue;
     this.location = location;
     this.status = status;
   }
 
   createIssuePost() {
-    super.createPost;
+    super.createPost();
   }
 
-  deleteIssuePost(posId) {
-    super.deletePost(postId);
+  deleteIssuePost() {
+    super.deletePost();
   }
 
   updateStatus() {

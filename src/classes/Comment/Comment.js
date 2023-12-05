@@ -1,4 +1,5 @@
 const { Post } = require("../Post/Post.js");
+const { User } = require("../User/User.js");
 
 class Comment extends Post {
   constructor({
@@ -8,18 +9,26 @@ class Comment extends Post {
     parentPost,
     comments = [],
   }) {
+    if (!user || !(user instanceof User)) {
+      throw new Error("Informe um usuário válido");
+    }
+
+    if (!textPost) {
+      throw new Error("Você precisa fornecer um texto de comentário.");
+    }
+
     super({ user, textPost, uploadImage });
     this.parentPost = parentPost;
     this.comments = comments;
   }
 
-  addComment(user, comment) {
-    const comment = new Comment({
+  addComment(author, content) {
+    const newComment = new Comment({
       user: new User(author),
       textPost: content,
       parentPost: this,
     });
-    this.comments.push(comment);
+    this.comments.push(newComment);
   }
 
   deleteComment(index) {

@@ -6,9 +6,9 @@ describe("Testes da classe User", () => {
 
     expect(user).toBeInstanceOf(User);
     expect(user.userId).toBeDefined();
-    expect(user._name).toBe("John Doe");
-    expect(user._email).toBe("john.doe@example.com");
-    expect(user._phone).toBe("+551234567890");
+    expect(user.name).toBe("John Doe");
+    expect(user.email).toBe("john.doe@example.com");
+    expect(user.phone).toBe("+551234567890");
   });
 
   test("Deve criar um usuário apenas com nome (parâmetros opcionais são null)", () => {
@@ -16,9 +16,9 @@ describe("Testes da classe User", () => {
 
     expect(user).toBeInstanceOf(User);
     expect(user.userId).toBeDefined();
-    expect(user._name).toBe("Jane Smith");
-    expect(user._email).toBeNull();
-    expect(user._phone).toBeNull();
+    expect(user.name).toBe("Jane Smith");
+    expect(user.email).toBeNull();
+    expect(user.phone).toBeNull();
   });
 
   test("Deve retornar erro ao tentar criar um usuário com email inválido", () => {

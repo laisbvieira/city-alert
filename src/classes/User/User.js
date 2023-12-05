@@ -8,9 +8,11 @@ class User {
     this.name = name;
     this.email = email;
     this.phone = phone;
+
+    User.users.push(this);
   }
 
-  static user = [];
+  static users = [];
 
   validateUserInput(name, phone, email) {
     if (!this.isValidString(name)) {
@@ -35,13 +37,17 @@ class User {
   }
 
   isValidPhone(phone) {
-    const phoneRegex = /^\+\d{2}\s?(\d{2,3}\s?)(\d{4,5}\-?\d{4})$/; // Formato brasileiro: +55 11 12345-6789 ou +55 11 123456789
+    const phoneRegex = /^\+\d{2}\s?(\d{2,3}\s?)(\d{4,5}\-?\d{4})$/;
     return phoneRegex.test(phone);
   }
 
   isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+  }
+
+  static getAllUsers() {
+    return User.users;
   }
 }
 
