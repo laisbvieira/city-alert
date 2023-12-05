@@ -48,4 +48,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, propor m
 
 **Apresentação em PDF**
 
-<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/uc?id=14GWp3RhMb9BOB4VpCvCmL2MfSfCBp3zH" width="80%" height="400"></iframe>
+[Link para o PDF](/public/assets/pdf/pitch-projeto-final)
