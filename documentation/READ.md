@@ -47,27 +47,37 @@ O projeto tem como objetivo a criação de uma plataforma local que funcione com
 
 - createPost:
 - deletePost:
-- uploadImage: função para receber o imageFile
+- loadImage: função para receber o imageFile
 
 #### Classe Comment
 
 1. Função: Criação do objeto comment
 2. Atributos:
-   Públicos: author, content
+   user: instância da classe User
+   postId
+   textPost
+   uploadImage
+   issue
+   location
+   status
 3. Métodos:
 
-- validateAuthor: verifica se o atributo author é instância da classe User
-- validateContent: verifica se o atributo content está presente
+- createIssuePost: método herdado do createPost da classe Post para publicar o post
+- deleteIssuePost: método herdado do deletePost da classe Post para remover o post
+- updateStatus: atualizar o status do problema/situação contido no post
 
 #### Classe Comment
 
 1. Função: Criação do objeto comment
 2. Atributos:
-   Públicos: author, content
+   user: instância da classe User
+   textPost
+   uploadImage
+   parentPost
 3. Métodos:
 
-- validateAuthor: verifica se o atributo author é instância da classe User
-- validateContent: verifica se o atributo content está presente
+- addComment: método herdado do createPost da classe Post para publicar o comentário
+- deleteComment: método herdado do deletePost da classe Post para remover o comentário
 
 #### Classe ImageUploader
 
@@ -80,17 +90,3 @@ O projeto tem como objetivo a criação de uma plataforma local que funcione com
 - isImageFile: verifica se o arquivo recebido é do tipo imagem e com as extensões permitidas: .png e .jpeg
 - uploadImage: simula o upload de imagem
 - handleImageSelect: lida a validação do arquivos da imagem para depois chamar a função de upload
-
-#### Classe UserPost:
-
-1. Função: Criação dos métodos de criação e remoção de post, atualização do status do post, adicionar e remover comentários e realizar upload de imagem no post
-2. Atributos:
-   Públicos: postId, user, address, issue, textPost, image, status, comments
-3. Métodos:
-
-- publishPost: publicar post com todos os parâmetros necessários
-- deletePost: remover post desejado
-- updatePostStatus: realizada atualização do status da issue do post com duas opções: Pendente e Resolvido
-- imageUpload: realizar upload de imagens no momento de criação do post
-- addComment: adicionar comentário a um post
-- deleteComment: remover comentário em um post
