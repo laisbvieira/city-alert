@@ -47,6 +47,9 @@ const { ImageUploader } = require("./src/classes/ImageUploader/ImageUploader");
   } catch (error) {
     console.error("Erro ao criar postagem:", error.message);
   } finally {
+    process.on("SIGTERM", () => {
+      console.log("Recebido sinal SIGTERM. Encerrando o processo Node.js");
+    });
     process.exit();
   }
 })();

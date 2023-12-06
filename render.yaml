@@ -1,5 +1,0 @@
-services:
-  - name: app
-    env: node
-    startCommand: "node app.js"
-    stopTimeoutSeconds: 30
