@@ -47,6 +47,6 @@ const { ImageUploader } = require("./src/classes/ImageUploader/ImageUploader");
   } catch (error) {
     console.error("Erro ao criar postagem:", error.message);
   } finally {
-    process.exit(0);
+    process.exit();
   }
 })();
