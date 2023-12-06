@@ -26,6 +26,7 @@ O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação
 - Node.js: Ambiente de execução para JavaScript no servidor.
 - Jest: Framework de testes para JavaScript.
 - UUID: Biblioteca para geração de identificadores únicos.
+- Express: Framework web para Noje.js para criação de servidor HTTP.
 
 **Instruções de Instalação**
 
@@ -49,3 +50,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, propor m
 **Apresentação em PDF**
 
 [Link para o PDF](https://drive.google.com/file/d/14GWp3RhMb9BOB4VpCvCmL2MfSfCBp3zH/view?usp=sharing)
+
+**Deploy**
+[Link para Render](https://city-alert.onrender.com/)

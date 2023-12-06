@@ -55,6 +55,24 @@ const app = express();
 })();
 
 app.get("/", function (req, res) {
-  res.send("Hello World");
+  const projectInfo = {
+    nome: "CityAlert - Plataforma Local para Alertas Urbanos",
+    descrição:
+      "O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação entre os membros de uma comunidade em uma cidade do interior (Paraisópolis, Minas Gerais). A plataforma permite que os usuários compartilhem alertas, problemas urbanos e soluções, promovendo a conscientização e a colaboração na resolução de questões que afetam a qualidade de vida na região.",
+    recursos: [
+      "Postagens de Alerta",
+      "Comentários Colaborativos",
+      "Upload de Imagens",
+      "Opções Padronizadas e Personalizadas",
+    ],
+    "tecnologias utilizadas": [
+      "JavaScript",
+      "Node.js",
+      "Jest",
+      "UUID",
+      "Express",
+    ],
+  };
+  res.send(projectInfo);
 });
 app.listen(3000);
