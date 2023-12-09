@@ -41,7 +41,7 @@ O CityAlert é uma aplicação local desenvolvida para facilitar a comunicação
 
 **Testes Unitários**
 
-Para executar os testes unitários, utilize o comando: `npm test`
+Para executar os testes unitários, utilize o comando: `npm jest --coverage`
 
 **Contribuição**
 
@@ -49,7 +49,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, propor m
 
 **Apresentação em PDF**
 
-[Link para o PDF](https://drive.google.com/file/d/1ys0YcaTBWFeDrvZmqDjA8ukwFLErPrxJ/view?usp=sharing)
+[Link para o PDF](https://drive.google.com/file/d/1V_b_0dfOgKD3konCYbcSie-DnxTs5Myd/view?usp=sharing)
 
 **Deploy**
 [Link para Render](https://city-alert.onrender.com/)
