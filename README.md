@@ -49,7 +49,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, propor m
 
 **Apresentação em PDF**
 
-[Link para o PDF](https://drive.google.com/file/d/14GWp3RhMb9BOB4VpCvCmL2MfSfCBp3zH/view?usp=sharing)
+[Link para o PDF](https://drive.google.com/file/d/1ys0YcaTBWFeDrvZmqDjA8ukwFLErPrxJ/view?usp=sharing)
 
 **Deploy**
 [Link para Render](https://city-alert.onrender.com/)
